@@ -1,4 +1,4 @@
-# AI Final Project: Optimizing Stock Trading Strategies with Various Algorithms
+# Optimizing Stock Trading Strategies with Various Algorithms
 
 ## Overview
 
