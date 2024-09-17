@@ -6,9 +6,9 @@ This project explores and compares the effectiveness of several AI algorithms in
 
 ## Team Roles
 
-- **Yeonbi Han**: XGBoost implementation, dataset preparation, and evaluation.
-- **Ellie Yang**: Q-learning for value-based trading strategies.
-- **Inkook Chun**: Deep Reinforcement Learning using policy gradients, focusing on fully connected layers and CNNs.
+- **Yeonbi**: XGBoost implementation, dataset preparation, and evaluation.
+- **Ellie**: Q-learning for value-based trading strategies.
+- **Inkook**: Deep Reinforcement Learning using policy gradients, focusing on fully connected layers and CNNs.
 - **Shared Tasks**: Feature engineering, data preprocessing, and evaluation.
 
 ## Project Description
