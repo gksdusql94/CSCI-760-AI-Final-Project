@@ -21,14 +21,6 @@ Historical stock price datasets with 5-minute bars (open, high, low, close price
 
 - **Data**: [BTC_5min.txt, AAPL_5min.txt](https://drive.google.com/drive/folders/1htN-2fW1qNGrNnSYx5oeNW2NNZr4Ntle?usp=sharing)
 
-## Timeline
-
-- **Weeks 1-2 (~4/2)**: Team formation, literature review.
-- **Weeks 3-4 (~4/16)**: Data collection, algorithm implementation begins.
-- **Weeks 5-6 (~4/30)**: Continued algorithm development, preliminary evaluations.
-- **Week 7 (~5/7)**: Integration of algorithmic approaches and comparative analysis.
-- **Weeks 8-9 (~5/21)**: Final evaluations and preparation for presentation.
-
 ## Deliverables
 
 - **Code Repository**: Includes all algorithm implementations, preprocessing scripts, and evaluation frameworks.
