@@ -40,21 +40,21 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 In stock trading, the environment changes rapidly and is influenced by various factors, which makes it difficult for traders to adopt a single strategy. Reinforcement learning, particularly Q-learning, provides a framework for creating adaptive trading algorithms based on real-time variables such as closing prices and stock ownership.
 **Q-learning** is a model-free reinforcement learning technique used to make sequential decisions by mapping states to actions. It optimizes cumulative rewards over time. In this project, we employed Q-learning to create an intelligent trading agent that learns buy and sell decisions based on historical data.
 
-### # Q-Learning Experiment Setup
+### Q-Learning Experiment Setup
 - **Dataset**: Historical stock data of **Apple (AAPL)** from 2005/01/03 to 2022/09/26 (~700,000 records).
 - We created two smaller datasets from the original: **AAPL_300k** (300,000 rows) and **AAPL_per_day** (aggregated daily data).
 - **Initial Parameters**:
   - Alpha: 0.1, Gamma: 0.95, Epsilon: 0.1, Epochs: 10
   - Initial Capital: $1,000
 
-### # Final Capital Results from Q-Learning
+### Final Capital Results from Q-Learning
 | Dataset      | Final Capital ($) |
 |--------------|-------------------|
 | **AAPL**     | 8,102.95          |
 | **AAPL_300k**| 265,946.25        |
 | **AAPL_per_day** | 157,894.73     |
 
-### # Agent’s Actions Over AAPL Close Price
+### Agent’s Actions Over AAPL Close Price
 We plotted Q-values over the close price for each dataset and selected actions using the `argmax` function to observe the agent’s behavior.
 
 **Figures**:  
