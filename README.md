@@ -36,11 +36,8 @@ X, y = np.array(X), np.array(y)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 ```
 
-## 📊 Results & Discussion
-
-### # Q-Learning
-In stock trading, the environment changes rapidly and is influenced by various factors, which makes it difficult for traders to adopt a single strategy. Reinforcement learning, particularly **Q-learning**, provides a framework for creating adaptive trading algorithms based on real-time variables such as closing prices and stock ownership.
-
+## 🔄 Q-Learning
+In stock trading, the environment changes rapidly and is influenced by various factors, which makes it difficult for traders to adopt a single strategy. Reinforcement learning, particularly Q-learning, provides a framework for creating adaptive trading algorithms based on real-time variables such as closing prices and stock ownership.
 **Q-learning** is a model-free reinforcement learning technique used to make sequential decisions by mapping states to actions. It optimizes cumulative rewards over time. In this project, we employed Q-learning to create an intelligent trading agent that learns buy and sell decisions based on historical data.
 
 ### # Q-Learning Experiment Setup
@@ -67,7 +64,7 @@ We plotted Q-values over the close price for each dataset and selected actions u
 
 ---
 
-### # SDE Analysis
+## 🔧 SDE Analysis
 The focus was on analyzing stock price movements using **Stochastic Differential Equations (SDEs)** and testing **Proximal Policy Optimization (PPO)** algorithms to forecast trends. Multiple configurations of **mean (mu)** and **standard deviation (SD)** for volatility modeling were tested:
 
 - **SDE Projection 1**: Mu = 0.001, SD = 0.01
@@ -78,7 +75,7 @@ Additionally, we identified a recurring pattern where the market trends upward o
 
 ---
 
-### # Results & Discussion
+## 📊 Results & Discussion
 - The first model (**YB XGBoost 1**) achieved a **61.11% accuracy** on the test data, outperforming the standalone GRU model.
 - The second model (**YB XGBoost 2**), despite using more epochs and layers, resulted in a lower **55% accuracy**, likely due to overfitting or increased complexity. Future improvements could include optimizing hyperparameters and testing different architectures.
 - The results show that Q-learning benefits significantly from more extensive datasets, as seen from the final capital results. Q-learning produced the best results when applied to the complete dataset, especially with Apple stock, which showed a strong upward trend.
