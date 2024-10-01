@@ -80,3 +80,10 @@ Additionally, we identified a recurring pattern where the market trends upward o
 - The second model (**YB XGBoost 2**), despite using more epochs and layers, resulted in a lower **55% accuracy**, likely due to overfitting or increased complexity. Future improvements could include optimizing hyperparameters and testing different architectures.
 - The results show that Q-learning benefits significantly from more extensive datasets, as seen from the final capital results. Q-learning produced the best results when applied to the complete dataset, especially with Apple stock, which showed a strong upward trend.
 - The **PPO model** displayed sensitivity to **mu** and **SD**. When SD was large, the model struggled to learn effectively, often oscillating and locking into suboptimal actions. The market’s behavior over three days influenced the model's ability to anticipate changes, but balancing actions (buy/sell) remained challenging.
+
+## 💡 Conclusion
+This project demonstrates the potential of combining AI techniques like GRU and XGBoost for stock trading strategies. While initial results are promising, there is significant room for optimization. Future work could explore:
+
+- Tuning hyperparameters to further improve performance.
+- Combining reinforcement learning methods with other ML models.
+- Testing on diverse assets like cryptocurrencies to generalize findings across different markets.
