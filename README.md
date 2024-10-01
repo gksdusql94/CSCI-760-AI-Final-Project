@@ -74,6 +74,35 @@ The focus was on analyzing stock price movements using **Stochastic Differential
 Additionally, we identified a recurring pattern where the market trends upward or downward for three consecutive days and adjusted prices accordingly. The **PPO algorithm**, although positive in cumulative P&L, struggled with oscillating behavior, often converging into suboptimal actions (buy/sell).
 
 ---
+## 📘 Code & Model Summary
+### First Model: YB XGBoost 1
+- Training the GRU Model: Two GRU layers followed by a dense output layer were trained for 30 epochs.
+- XGBoost Integration: Extracted features from GRU's hidden layers to train the XGBoost classifier, achieving 61.11% accuracy.
+
+```python
+gru_model = Sequential([
+    GRU(50, return_sequences=True, input_shape=(window_size, len(features))),
+    GRU(50),
+    Dense(1, activation='sigmoid')
+])
+gru_model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+gru_model.fit(X_train, y_train, epochs=30, batch_size=64, verbose=1)
+```
+### Second Model: YB XGBoost 2
+- Training the GRU Model: Extended to 3 GRU layers with Dropout to prevent overfitting and trained for 50 epochs.
+- XGBoost Integration: Similar process but led to lower accuracy (55%), likely due to overfitting.
+
+```python
+gru_model = Sequential([
+    GRU(128, return_sequences=True, input_shape=(window_size, len(features))),
+    Dropout(0.3),
+    GRU(128, return_sequences=True),
+    Dropout(0.3),
+    GRU(128),
+    Dropout(0.3),
+    Dense(1, activation='sigmoid')
+])
+```
 
 ## 📊 Results & Discussion
 - The first model (**YB XGBoost 1**) achieved a **61.11% accuracy** on the test data, outperforming the standalone GRU model.
